@@ -52,8 +52,8 @@ outputs:
             - conda_trampoline
           pip_check: false
       - package_contents:
-          bin:
-            - _cg_trampoline
+          files:
+            - python-scripts/_cg_trampoline*
 
   - package:
       name: conda-global
