@@ -1,5 +1,5 @@
 context:
-  version: "0.1.1"
+  version: "0.2.0"
   python_min: "3.10"
 
 recipe:
@@ -8,7 +8,7 @@ recipe:
 
 source:
   url: https://github.com/conda-incubator/conda-global/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 7298d1ada2982d72ca7136e24ae426e182d13b452627a495cead81dc4b144d53
+  sha256: 4e4fd030df80fc154237aaf46ff6bf757bd2f70a89c73f32650145ebbd3f4ce6
 
 build:
   number: 2
