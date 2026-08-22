@@ -1,6 +1,5 @@
 context:
   version: "0.2.0"
-  python_min: "3.10"
 
 recipe:
   name: conda-global-split
@@ -51,6 +50,8 @@ outputs:
           imports:
             - conda_trampoline
           pip_check: false
+      - script:
+          - python -c "import subprocess; from conda_trampoline import find_trampoline_binary; assert subprocess.run([find_trampoline_binary()]).returncode == 1"
       - package_contents:
           files:
             - python-scripts/_cg_trampoline*
@@ -60,6 +61,8 @@ outputs:
       version: ${{ version }}
     build:
       number: 2
+      skip:
+        - not linux64
       noarch: python
       script:
         env:
